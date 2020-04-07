@@ -83,8 +83,8 @@ function employeeBonus( employees ) {
   let addedBonus = Number( employees.annualSalary ) * bonus.bonusPercentage ;
   bonus.totalCompensation = Number( employees.annualSalary ) + addedBonus;
 
-  bonus.totalBonus = parseInt(addedBonus);
-
+  bonus.totalBonus = Math.round(addedBonus);
+  
   return bonus;   
 }
 
